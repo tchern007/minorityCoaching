@@ -6,6 +6,8 @@ import { Home } from '../pages/home/home';
 import { Pauses } from '../pages/pauses/pauses'
 import { TimeLine } from '../pages/timeline/timeline';
 import { Coaching } from '../pages/coaching/coaching';
+import { Projection } from '../pages/projection/projection';
+
 
 
 
@@ -57,7 +59,7 @@ export class MyApp {
       { icon : "home" , title : "Accueil" , component: Pauses },
       { icon : "logo-euro" , title : "Mes Plan'it" , component: Coaching },
       { icon : "trophy" , title : "Challenges" , component: Pauses },
-      { icon : "trending-up" , title : "Projections" , component: Pauses }     
+      { icon : "trending-up" , title : "Projections" , component: Projection }     
     ];
   }
  
