@@ -1,0 +1,27 @@
+login {
+
+    ion-content {
+        background :url('file:///android_asset/www/assets/img/fondEcran.png') no-repeat fixed center;    
+    }    
+    .scroll-content {
+        overflow-y: hidden;
+        vertical-align: middle;
+    }     
+    .imageLogin {        
+        background-color: transparent;        
+    }
+
+ /*   .vertical-align-content > *
+    {
+        display: flex!important;
+        align-content: center!important;
+        align-items: center!important;
+    }*/
+    
+    .imagePadding {
+        padding-bottom: 5%;
+    }    
+    
+ 
+
+}

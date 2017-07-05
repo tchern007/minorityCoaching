@@ -1,0 +1,111 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle icon-only>
+            <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title>
+            Ma Cagnotte
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col class="argentDispo">
+                Montant à répartir :
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div *ngIf="!montantRepartir">
+        <ion-card>
+            <ion-item>
+                <ion-avatar item-start>
+                    <ion-icon name="alert"></ion-icon>
+                </ion-avatar>
+                Rien a répartir
+            </ion-item>
+        </ion-card>
+    </div>
+
+    <div *ngIf="montantRepartir">
+        <ion-card>
+            <ion-item>
+                <ion-avatar item-start>
+                    <ion-icon name="git-branch"></ion-icon>
+                </ion-avatar>
+                <h2 class="balancePositive">{{montantRepartir}}
+                    <ion-icon style="font-size: inherit;" name="logo-euro"></ion-icon>
+                </h2>
+                <p>{{moisARepartir}}</p>
+
+            </ion-item>
+        </ion-card>
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col class="argentDispo">
+                Ma situation globale :
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <div *ngIf="!dataCamembert">
+        <ion-card>
+            <ion-item>
+                <ion-avatar item-start>
+                    <ion-icon name="alert"></ion-icon>
+                </ion-avatar>
+                Aucun tableau de bord existant
+            </ion-item>
+        </ion-card>
+    </div>
+
+    <div *ngIf="dataCamembert">
+    <ion-card>
+        <ion-card-header>
+
+        </ion-card-header>
+        <ion-card-content>
+            <canvas #camembert></canvas>
+        </ion-card-content>
+    </ion-card>
+    </div>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col class="argentDispo">
+                Mes coachings :
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <div *ngIf="mesCoachings==''">
+        <ion-card>
+            <ion-item>
+                <ion-avatar item-start>
+                    <ion-icon name="alert"></ion-icon>
+                </ion-avatar>
+                Rien a répartir
+            </ion-item>
+        </ion-card>
+    </div>
+    <div *ngIf="mesCoachings">
+        <ion-card *ngFor="let coaching of mesCoachings">
+            <ion-item>
+                <ion-avatar item-start>
+                    <ion-icon style="color: black;" name="{{coaching.icon}}"></ion-icon>
+                </ion-avatar>
+                <h2>{{coaching.title}}</h2>
+                <p>{{coaching.montant}}
+                    <ion-icon style="font-size: inherit;" name="logo-euro"></ion-icon> le {{coaching.date}} </p>
+            </ion-item>
+        </ion-card>
+    </div>
+
+
+
+    <ion-fab right bottom>
+        <button ion-fab color="#cf0008"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+</ion-content>

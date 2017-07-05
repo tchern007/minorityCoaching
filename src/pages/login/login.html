@@ -1,0 +1,65 @@
+<ion-content  padding>      
+               <div ion-fixed>
+    <ion-grid >          
+        <ion-row justify-content-center> 
+            <div class="imagePadding">
+         
+                <ion-img class="imageLogin" width="110" height="110" src=" file:///android_asset/www/assets/img/logo-time-2-plan.png"></ion-img>
+            </div>           
+        </ion-row>         
+
+  
+        <form  (ngSubmit)="connexion(loginForm.value)" #loginForm="ngForm" novalidate>
+            <ion-row justify-content-center>               
+                <ion-list col-md-7 col-12 >
+                    <ion-item>
+                        <ion-label><ion-icon name="contact"></ion-icon></ion-label>
+                        <ion-input clearInput name="identifiant" type="text"  placeholder="Votre login" ngModel required #identifiant="ngModel" [(ngModel)]="login"></ion-input>                         
+                    </ion-item>
+                    <ion-item>
+                        <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+                        <ion-input name="password" type="password"  placeholder="Votre mot de passe" ngModel required #password="ngModel" [(ngModel)]="motDePasse"></ion-input>            
+                    </ion-item>                  
+                </ion-list>            
+                <ion-row col-md-7 col-12>
+                    <button  type="submit" [disabled]="!loginForm.valid" color="secondary" full ion-button>Connexion</button>   
+                </ion-row> 
+            </ion-row> 
+        </form>
+                
+    </ion-grid>     
+    <!--<div *ngIf="identifiant.control.dirty && !identifiant.control.valid">L'identifiant est requis</div> 
+    <div *ngIf="password.control.dirty && !password.control.valid">Le mot de passe est requis</div>-->
+                   </div>
+</ion-content>
+    
+
+
+
+<!--
+<ion-header>
+<ion-navbar>
+<button ion-button menuToggle>
+<ion-icon name="menu"></ion-icon>
+</button>
+<ion-title>Hello Ionic</ion-title>
+</ion-navbar>
+</ion-header>
+-->
+
+
+<!--<ion-content padding>
+
+<h3>Welcome to your first Ionic app!</h3>
+
+<p>
+This starter project is our way of helping you get a functional app running in record time.
+</p>
+<p>
+Follow along on the tutorial section of the Ionic docs!
+</p>
+<p>
+
+</p>-->
+
+<!--</ion-content>-->

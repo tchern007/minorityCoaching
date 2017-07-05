@@ -1,0 +1,23 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar color="secondary">
+            <ion-item style="
+    background-color: transparent;
+    color: white;">
+                <ion-avatar item-start>
+                    <img ng-src="https://upload.wikimedia.org/wikipedia/en/7/70/Shawn_Tok_Profile.jpg" src="https://upload.wikimedia.org/wikipedia/en/7/70/Shawn_Tok_Profile.jpg">
+                </ion-avatar>
+                <h2>Marty McFly</h2>
+            </ion-item>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+               <ion-icon name="{{p.icon}}"></ion-icon> {{p.title}}
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
