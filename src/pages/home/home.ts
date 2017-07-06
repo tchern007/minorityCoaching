@@ -30,9 +30,9 @@ export class Home {
         this.dataCamembert = {
             options : {legend:"Ma situation globale :"},
             labels: [
-                "Famille",
-                "Voiture",
-                "Loisirs"],
+                "Vacances",
+                "Mes proches",
+                "Maison"],
             datasets: [{
                 data: [120, 193, 50],
                 backgroundColor: [
