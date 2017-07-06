@@ -32,19 +32,16 @@ export class Home {
             labels: [
                 "Famille",
                 "Voiture",
-                "Impôts",
                 "Loisirs"],
             datasets: [{
-                data: [120, 193, 300, 50],
+                data: [120, 193, 50],
                 backgroundColor: [
                     '#f14d4d',
                     '#3373ec',
-                    '#dc4acf',
                     '#36e665'],
                 hoverBackgroundColor: [
                     "#FF6384",
                     "#36A2EB",
-                    "#FFCE56",
                     "#36A2EB"
                 ]
             }]

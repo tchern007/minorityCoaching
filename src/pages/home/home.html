@@ -41,7 +41,7 @@
         <ion-card-header>
 
         </ion-card-header>
-        <ion-card-content>
+        <ion-card-content style="height: 200px;">
             <canvas #camembert></canvas>
         </ion-card-content>
     </ion-card>
@@ -60,6 +60,7 @@
                                     <img item-left src="../../assets/img/{{coaching.sourceimg}}">
                                 </ion-col>
                                 <ion-col style="padding:0px" >
+                                    <div style="color: white; font-size: 16px;text-align: right;" center>{{coaching.date}}&nbsp;</div> 
                                    <!-- {{coaching.nameTheme}}-->
                                 </ion-col>
                             </ion-row>                  
@@ -76,11 +77,11 @@
                 </ion-row>
                 <ion-row row-1 style="padding:0px;    height: 52px;">
                       <ion-col style="padding:0px" col-2 align-self-start>
-                        <ion-icon name="thumbs-down" style = "zoom:2.5;color:white; padding-left: 10px;"></ion-icon>
+                        <ion-icon name="close" style = "zoom:2.5;color:red; padding-left: 10px;"></ion-icon>
                    </ion-col>
                     <ion-col style="padding:0px" >&nbsp;</ion-col>
                     <ion-col style="padding:0px" col-3 align-self-start>
-                         <ion-icon name="thumbs-up" style = "zoom:2.5;color:white;padding-right: 3px;"></ion-icon>
+                         <ion-icon name="checkmark" style = "zoom:2.5;color:green;padding-right: 3px;"></ion-icon>
                     </ion-col>
                 </ion-row>                  
             </ion-grid>
