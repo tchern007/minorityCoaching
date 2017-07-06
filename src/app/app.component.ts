@@ -59,7 +59,7 @@ export class MyApp {
       { icon : "home" , title : "Accueil" , component: Pauses },
       { icon : "logo-euro" , title : "Mes Plan'it" , component: Coaching },
       { icon : "trophy" , title : "Challenges" , component: Pauses },
-      { icon : "trending-up" , title : "Projections" , component: Projection }     
+      { icon : "trending-up" , title : "Evenement à venir" , component: Projection }     
     ];
   }
  
