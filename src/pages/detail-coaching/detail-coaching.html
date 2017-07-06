@@ -4,12 +4,28 @@
             <ion-icon name='menu'></ion-icon>
         </button>
         <ion-title>
-            Mon coaching {{monCoaching.titre}}
+            {{monCoaching.titre}}
         </ion-title>
     </ion-navbar>
 </ion-header>
 <ion-content class="padding">
-
-    
+    <section id="cd-timeline" class="cd-container">
+        <div class="cd-timeline-block" *ngFor="let evenement of evenements">
+            <div class="cd-timeline-picture {{evenement.class}}">
+                <img ng-src="../../assets/img/evenement.img" src="../../assets/img/{{evenement.img}}">
+            </div>
+            <div class="cd-timeline-content  {{evenement.class}}">
+                <h5 class="marginBottom0 marginTop0 ng-binding">Le {{evenement.date}} </h5>
+                <p class="marginTop5 cd-author ng-binding" style="font-size: 13px;margin-bottom: 2px;margin-top : 2px;">
+                    {{evenement.titre}}
+                </p>
+                <p style="margin-bottom: 0px;margin-top: 2px !important;font-size: 15px;">{{evenement.sommeCourante}}
+                    <ion-icon style="font-size: inherit;" name="logo-euro"></ion-icon> sur {{evenement.sommeCible}}
+                    <ion-icon style="font-size: inherit;" name="logo-euro"></ion-icon>
+                </p>
+                <progress-bar [progress]="evenement.pourcentage"></progress-bar>
+            </div>
+        </div>
+    </section>
 
 </ion-content>

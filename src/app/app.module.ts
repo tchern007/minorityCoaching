@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-
+import { Http, Response, RequestOptions, URLSearchParams } from '@angular/http';
 import { MyApp } from './app.component';
+import { HttpModule } from '@angular/http';
 
 import { Login } from '../pages/login/login';
 import { Home } from '../pages/home/home';
@@ -14,7 +15,8 @@ import { Coaching } from '../pages/coaching/coaching';
 import { DetailCoaching } from '../pages/detail-coaching/detail-coaching'
 import { Projection } from '../pages/projection/projection'
 import { Evenement } from '../pages/evenement/evenement'
-
+import { ProgressBarComponent } from '../pages/bar/bar'
+import { HttpService } from '../services/http/http.service'
 
 
 
@@ -35,10 +37,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Coaching,
     DetailCoaching,
     Projection,    
-    Evenement
+    Evenement,
+    ProgressBarComponent
   ],
   imports: [
     FormsModule,
+    HttpModule,
     BrowserModule,    
     IonicModule.forRoot(MyApp),
   ],
@@ -53,13 +57,15 @@ bootstrap: [IonicApp],
     Coaching,
     DetailCoaching,
     Projection,
-    Evenement
+    Evenement,
+    ProgressBarComponent
     
   ],
   providers: [
     SessionService,  
     StatusBar,
     SplashScreen,
+    HttpService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

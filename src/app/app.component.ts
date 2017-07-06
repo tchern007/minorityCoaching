@@ -55,7 +55,7 @@ export class MyApp {
     this.initializeApp();  
 
     this.pages = [
-      { icon : "home" , title : "Accueil" , component: Pauses },
+      { icon : "home" , title : "Accueil" , component: Home },
       { icon : "logo-euro" , title : "Mes Plan'it" , component: Coaching },
       { icon : "trophy" , title : "Challenges" , component: Pauses },
       { icon : "trending-up" , title : "Projections" , component: Projection }     

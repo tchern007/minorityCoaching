@@ -1,0 +1,38 @@
+progress-bar {
+ 
+    .progress-outer {
+        width: 96%;
+       /* margin: 10px 2%;
+        padding: 3px;*/
+        margin : 0px;
+        padding: 0px;
+        text-align: center;
+        background-color: #f4f4f4;
+        border: 1px solid #dcdcdc;
+        color: #fff;
+        border-radius: 20px;
+    }
+ 
+    .progress-inner {
+        min-width: 15%;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 5px;
+        border-radius: 20px;        
+    }
+
+    .full{
+ background-color: #8eff54 !important;
+    }
+
+    .half {
+ background-color: #6f89b9 !important;
+    }
+
+    .tiers {
+ background-color: #f24747 !important;
+    }
+
+
+ 
+}
