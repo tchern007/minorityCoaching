@@ -12,7 +12,9 @@ import { TableauPauses } from '../pages/pauses/tab';
 import { TimeLine } from '../pages/timeline/timeline';
 import { Coaching } from '../pages/coaching/coaching';
 import { DetailCoaching } from '../pages/detail-coaching/detail-coaching'
-import { Projection } from '../pages/projection/projection';
+import { Projection } from '../pages/projection/projection'
+import { Evenement } from '../pages/evenement/evenement'
+
 
 
 
@@ -32,7 +34,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TableauPauses,
     Coaching,
     DetailCoaching,
-    Projection
+    Projection,    
+    Evenement
   ],
   imports: [
     FormsModule,
@@ -49,7 +52,8 @@ bootstrap: [IonicApp],
     TimeLine,
     Coaching,
     DetailCoaching,
-    Projection
+    Projection,
+    Evenement
     
   ],
   providers: [

@@ -12,7 +12,6 @@ import { Projection } from '../pages/projection/projection';
 
 
 
-
 /*import { ListPage } from '../pages/list/list';*/
 
 import { StatusBar } from '@ionic-native/status-bar';
