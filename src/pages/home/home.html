@@ -46,8 +46,8 @@
         </ion-card-content>
     </ion-card>
     </div>
-
-    <ion-slides style="height: 10%">
+    <div>
+    <ion-slides top>
         <ion-slide *ngFor="let coaching of mesCoachings">
            <ion-card  [style.background-image]="coaching.bgImage">
 
@@ -109,11 +109,6 @@
 
             </ion-card>
         </ion-slide>
-    <ion-slide>
-        <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-        <h1>Slide 3</h1>
-    </ion-slide>
     </ion-slides>
+    </div>
 </ion-content>
