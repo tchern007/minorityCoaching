@@ -2,6 +2,7 @@ import { Component,ViewChild } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 import { App, ViewController } from 'ionic-angular';
 import { DetailCoaching } from '../detail-coaching/detail-coaching'
+import { Evenement } from '../evenement/evenement'
 
 
 @Component({
@@ -34,6 +35,10 @@ export class Coaching {
         coaching : page
     });
     //this.nav.setRoot(page.component);
+  }
+
+  evenement(){
+      this.appCtrl.getRootNav().setRoot(Evenement);
   }
 
 
