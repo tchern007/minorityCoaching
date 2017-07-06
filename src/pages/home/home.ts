@@ -30,7 +30,7 @@ export class Home {
                 "Famille",
                 "Voiture",
                 "Impôts",
-                "Loisir"],
+                "Loisirs"],
             datasets: [{
                 data: [120, 193, 300, 50],
                 backgroundColor: [

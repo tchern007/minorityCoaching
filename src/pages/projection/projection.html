@@ -4,12 +4,81 @@
             <ion-icon name='menu'></ion-icon>
         </button>
         <ion-title>
-            Projection
+            Evenements à venir
         </ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content padding>
-ddd
+<ion-content>
+    <ion-slides>
+        <ion-slide *ngFor="let coaching of mesCoachings"> 
+             <!--<ion-card style = "background-color: aquamarine;">-->
+           <ion-card style = "background-image: url(../../assets/img/{{coaching.img}});">
+
+
+            <!--<img class="imgBlur" src="../../assets/img/{{coaching.img}}"> 
+            <div class="card-title">{{coaching.titre}}</div>
+            <div class="card-subtitle">{{coaching.evenement}}<ion-icon style="font-size: inherit;" name="logo-euro"></ion-icon></div>
+            <div class="card-icone">
+                
+            </div>
+            <div class="card-accept">-->
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col align-self-start>
+                        <img item-left src="../../assets/img/{{coaching.sourceimg}}">
+                    </ion-col>
+                </ion-row>    
+                <ion-row>
+                    <ion-col align-self-start>
+                        <div>{{coaching.titre}}</div>
+                        <div>{{coaching.evenement}}</div> 
+                        <div>../assets/img/{{coaching.img}}       </div> 
+                                        
+                    </ion-col>  
+                </ion-row>
+                <ion-row>
+                      <ion-col col-2 align-self-start>
+                        <ion-icon name="thumbs-down" style = "zoom:2.5;color:white"></ion-icon>
+                   </ion-col>
+                    <ion-col >&nbsp;</ion-col>
+                    <ion-col col-3 align-self-end>
+                         <ion-icon name="thumbs-up" style = "zoom:2.5;color:white"></ion-icon>
+                    </ion-col>
+                </ion-row>                  
+            </ion-grid>
+            
+                
+                
+<!--            </div>
+
+            <ion-item>
+                <ion-icon name="{{coaching.icone}}" item-start large></ion-icon>
+                <h2>{{coaching.titre}}</h2>
+            </ion-item>
+
+            <ion-item>
+                <img item-left src="../../assets/img/{{coaching.sourceimg}}">
+                <p>{{coaching.sourcemessage}}</p>
+            </ion-item>
+
+            <ion-item>
+                <span item-left>{{coaching.evenement}} €</span>
+                <button ion-button icon-left clear item-end>
+                <ion-icon name="add-circle"></ion-icon>
+                Ajouter evenement
+                </button>
+            </ion-item>-->
+
+            </ion-card>
+        </ion-slide>
+    <ion-slide>
+        <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+        <h1>Slide 3</h1>
+    </ion-slide>
+    </ion-slides>
 
 
 
