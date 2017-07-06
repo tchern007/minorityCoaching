@@ -12,7 +12,7 @@
     <ion-slides>
         <ion-slide *ngFor="let coaching of mesCoachings"> 
              <!--<ion-card style = "background-color: aquamarine;">-->
-           <ion-card style = "background-image: url(../../assets/img/{{coaching.img}});">
+           <ion-card [style.background-image]="coaching.bgImage">
 
 
             <!--<img class="imgBlur" src="../../assets/img/{{coaching.img}}"> 
