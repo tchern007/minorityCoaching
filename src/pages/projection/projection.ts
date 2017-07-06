@@ -20,13 +20,19 @@ export class Projection{
     ngOnInit() {
         this.mesCoachings = [
             { img: "vacances.jpg",date: "01/09/2017", titre: "Voyage au Pérou", 
-            evenement: "100" , icone: "football", sourceimg : "google.png", color : "#111111",bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/vacances.jpg')},  
+            evenement: "100" , icone: "football", sourceimg : "google.png",bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/vacances.jpg')
+            , theme:"themeLoisir", nameTheme : "Mes loisirs"
+            },  
 
-            { img: "maison.jpg",date: "10/09/2017", titre: "Anniversaire de Matéo", 
-            evenement: "500", icone: "home", sourceimg : "facebook.png" , color : "#111111",bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/maison.jpg')} ,    
+            { img: "evt_anniversaire.png",date: "10/09/2017", titre: "Anniversaire de Matéo", 
+            evenement: "500", icone: "home", sourceimg : "facebook.png" , bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/evt_anniversaire.png')
+            , theme:"themeFamille", nameTheme : "Ma famille"    
+            } ,    
 
-            { img: "voiture.png",date: "09/09/2017", titre: "Contrôle technique", 
-            evenement: "50", icone: "contacts", sourceimg : "google.png" , color : "#111111",bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/voiture.jpg')}
+            { img: "evt_voiture.png",date: "09/09/2017", titre: "Contrôle technique", 
+            evenement: "50", icone: "contacts", sourceimg : "google.png" , bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/evt_voiture.png')
+            , theme:"themeVoiture", nameTheme : "Ma voiture"
+            }
 
                
         ]

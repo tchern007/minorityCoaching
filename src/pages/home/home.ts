@@ -2,6 +2,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 import { Chart } from 'chart.js';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'home-app',
@@ -17,8 +18,9 @@ export class Home {
     moisARepartir: string;
     dataCamembert: any;
     mesCoachings: any[];
+    bgImage:any;
 
-    constructor(public navCtrl: NavController, public menu: MenuController) {
+    constructor(public navCtrl: NavController, public menu: MenuController, private sanitizer: DomSanitizer) {
     }
 
     ngOnInit() {
@@ -26,6 +28,7 @@ export class Home {
         this.montantRepartir = '400';
         this.moisARepartir = "Juillet 2017";
         this.dataCamembert = {
+            options : {legend:"Ma situation globale :"},
             labels: [
                 "Famille",
                 "Voiture",
@@ -48,10 +51,24 @@ export class Home {
         }
 
         this.mesCoachings = [
-            { icon: "home", title: "Impôts", date: "01/09/2017", montant: "1900" },
-            { icon: "logo-reddit", title: "Anniversaire", date: "03/09/2017", montant: "100" },
-            { icon: "car", title: "Voiture", date: "09/09/2017", montant: "600" },
+            { img: "vacances.jpg",date: "01/09/2017", titre: "Voyage au Pérou", 
+            evenement: "100" , icone: "football", sourceimg : "google.png",bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/vacances.jpg')
+            , theme:"themeLoisir", nameTheme : "Mes loisirs"
+            },  
+
+            { img: "evt_anniversaire.png",date: "10/09/2017", titre: "Anniversaire de Matéo", 
+            evenement: "500", icone: "home", sourceimg : "facebook.png" , bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/evt_anniversaire.png')
+            , theme:"themeFamille", nameTheme : "Ma famille"    
+            } ,    
+
+            { img: "evt_voiture.png",date: "09/09/2017", titre: "Contrôle technique", 
+            evenement: "50", icone: "contacts", sourceimg : "google.png" , bgImage : this.sanitizer.bypassSecurityTrustStyle('url(../../assets/img/evt_voiture.png')
+            , theme:"themeVoiture", nameTheme : "Ma voiture"
+            }
+
+               
         ]
+
 
       /*  this.mesCoachings = [];
         this.dataCamembert =null;

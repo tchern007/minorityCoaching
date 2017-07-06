@@ -10,30 +10,13 @@
 </ion-header>
 <ion-content padding>
 
-    <ion-grid>
-        <ion-row>
-            <ion-col class="argentDispo">
-                Montant à répartir :
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-    <div *ngIf="!montantRepartir">
-        <ion-card>
-            <ion-item>
-                <ion-avatar item-start>
-                    <ion-icon name="alert"></ion-icon>
-                </ion-avatar>
-                Rien a répartir
-            </ion-item>
-        </ion-card>
-    </div>
-
     <div *ngIf="montantRepartir">
         <ion-card>
             <ion-item>
                 <ion-avatar item-start>
                     <ion-icon name="git-branch"></ion-icon>
                 </ion-avatar>
+                <h2>Montant à répartir :</h2>
                 <h2 class="balancePositive">{{montantRepartir}}
                     <ion-icon style="font-size: inherit;" name="logo-euro"></ion-icon>
                 </h2>
@@ -42,14 +25,6 @@
             </ion-item>
         </ion-card>
     </div>
-    <ion-grid>
-        <ion-row>
-            <ion-col class="argentDispo">
-                Ma situation globale :
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
     <div *ngIf="!dataCamembert">
         <ion-card>
             <ion-item>
@@ -72,40 +47,73 @@
     </ion-card>
     </div>
 
-    <ion-grid>
-        <ion-row>
-            <ion-col class="argentDispo">
-                Mes coachings :
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+    <ion-slides style="height: 10%">
+        <ion-slide *ngFor="let coaching of mesCoachings">
+           <ion-card  [style.background-image]="coaching.bgImage">
 
-    <div *ngIf="mesCoachings==''">
-        <ion-card>
+            <ion-grid style="padding:0px">
+                <ion-row row-1 style="padding:0px" ><!--class="{{coaching.theme}}"-->
+                    <ion-col style="padding:0px" align-self-start>
+                        <ion-grid style="padding:0px">
+                            <ion-row style="padding:0px" >
+                                <ion-col style="padding:0px" >
+                                    <img item-left src="../../assets/img/{{coaching.sourceimg}}">
+                                </ion-col>
+                                <ion-col style="padding:0px" >
+                                   <!-- {{coaching.nameTheme}}-->
+                                </ion-col>
+                            </ion-row>                  
+                        </ion-grid>
+                       
+                    </ion-col>
+                </ion-row>    
+                <ion-row row-4 style="padding:0px" style="height: 95px">
+                    <ion-col style="padding:0px" align-self-start>
+                        <div style="color: white; padding-top: 26px;    font-size: 27px;" center>{{coaching.titre}}</div>
+                        <div style="color: white; font-size: 16px;" center>{{coaching.evenement}}&nbsp;€</div> 
+                                        
+                    </ion-col>  
+                </ion-row>
+                <ion-row row-1 style="padding:0px;    height: 52px;">
+                      <ion-col style="padding:0px" col-2 align-self-start>
+                        <ion-icon name="thumbs-down" style = "zoom:2.5;color:white; padding-left: 10px;"></ion-icon>
+                   </ion-col>
+                    <ion-col style="padding:0px" >&nbsp;</ion-col>
+                    <ion-col style="padding:0px" col-3 align-self-start>
+                         <ion-icon name="thumbs-up" style = "zoom:2.5;color:white;padding-right: 3px;"></ion-icon>
+                    </ion-col>
+                </ion-row>                  
+            </ion-grid>
+            
+                
+                
+<!--            </div>
+
             <ion-item>
-                <ion-avatar item-start>
-                    <ion-icon name="alert"></ion-icon>
-                </ion-avatar>
-                Rien a répartir
+                <ion-icon name="{{coaching.icone}}" item-start large></ion-icon>
+                <h2>{{coaching.titre}}</h2>
             </ion-item>
-        </ion-card>
-    </div>
-    <div *ngIf="mesCoachings">
-        <ion-card *ngFor="let coaching of mesCoachings">
+
             <ion-item>
-                <ion-avatar item-start>
-                    <ion-icon style="color: black;" name="{{coaching.icon}}"></ion-icon>
-                </ion-avatar>
-                <h2>{{coaching.title}}</h2>
-                <p>{{coaching.montant}}
-                    <ion-icon style="font-size: inherit;" name="logo-euro"></ion-icon> le {{coaching.date}} </p>
+                <img item-left src="../../assets/img/{{coaching.sourceimg}}">
+                <p>{{coaching.sourcemessage}}</p>
             </ion-item>
-        </ion-card>
-    </div>
 
+            <ion-item>
+                <span item-left>{{coaching.evenement}} €</span>
+                <button ion-button icon-left clear item-end>
+                <ion-icon name="add-circle"></ion-icon>
+                Ajouter evenement
+                </button>
+            </ion-item>-->
 
-
-    <ion-fab right bottom>
-        <button ion-fab color="#cf0008"><ion-icon name="add"></ion-icon></button>
-    </ion-fab>
+            </ion-card>
+        </ion-slide>
+    <ion-slide>
+        <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+        <h1>Slide 3</h1>
+    </ion-slide>
+    </ion-slides>
 </ion-content>
